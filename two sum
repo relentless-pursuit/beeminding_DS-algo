@@ -1,0 +1,18 @@
+class Program {
+  public static int[] twoNumberSum(int[] array, int targetSum) {
+   HashMap <Integer, Integer> mp = new HashMap <>(); 
+        for (int i = 0; i<array.length; i++)
+        {
+            int locator = targetSum - array[i]; 
+            if (mp.containsKey(locator))
+            {
+                return new int[] {array[i], locator}; 
+            }
+            else
+            {
+            mp.put(array[i], i); 
+            }
+        }
+    return new int[0]; //return null
+}
+}
