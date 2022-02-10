@@ -1,0 +1,11 @@
+function telephoneCheck(str) {
+    const format0 = /^\d{10}$/
+    const format1 = /^\d{3}\-\d{3}\-\d{4}$/
+
+
+return format0.test(str) || format1.test(str)
+}
+
+//function call
+telephoneCheck('555-555-5555') // true 
+telephoneCheck('555+555-5555') // false
