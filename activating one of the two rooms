@@ -1,0 +1,25 @@
+<body>
+    <div id="myDIV">
+      <button id="button1">Room 1</button>
+      <button id="button2">Room 2</button>
+    </div>
+    <script>
+      function disable() {
+        var x1 = document.getElementById("button1");
+        var x2 = document.getElementById("button2");
+
+        random = Math.floor(Math.random() * 10) + 1;
+
+        console.log(random); // for the validation of O/P while checking 
+
+        if (random % 2 !== 0) 
+        x1.disabled = true; // room 2 activated in odd number 
+        else 
+        x2.disabled = true; // room 1 activated in even number 
+      }
+      window.addEventListener("load", function () {
+        disable();
+      });
+
+    </script>
+  </body>
