@@ -1,0 +1,23 @@
+class Program {
+  public static List<Integer[]> threeNumberSum(int[] array, int targetSum) {
+    // Write your code here.
+		Arrays.sort(array); 
+		ArrayList<Integer[]> list = new ArrayList<Integer[]>(); 
+		for (int i = 0; i< array.length; i++)                        //used three pointer approach with 0(n3)
+		{
+			for (int j = i + 1; j<array.length; j++)
+			{
+				for (int k = j + 1; k<array.length; k++)
+				{
+					if (targetSum == (array[i] + array[j] + array[k]))
+					{
+						   Integer[] a={array[i], array[j], array[k]};       //int[] a = {array[i], array[j], array[k]}; 
+    					 list.add(a);                                      //throws error can't convert int to integer 
+					}                                                      //since Intefer type being added to list and not int
+				}                                                        //how to add to an array list of integer array
+			}
+			
+		}
+		return list;                                                 //either returns an empty list or full list 
+  }                                                              //so, no condition required if empty or not 
+}
