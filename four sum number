@@ -1,0 +1,22 @@
+class Program {
+  public static List<Integer[]> fourNumberSum(int[] array, int targetSum) {
+		ArrayList<Integer[]> list = new ArrayList<Integer[]>(); 
+		Arrays.sort(array); 
+		for (int i = 0; i<array.length - 3; i++) {
+			for (int j = i+1; j<array.length - 2; j++) {
+				int l = j + 1; 
+				int r = array.length - 1; 
+				while (l < r) {
+					int currentSum = array[i] + array[j] + array[l] + array[r]; 
+					if (targetSum == currentSum) {
+						Integer[] a = {array[r], array[l], array[j], array[i]};
+						list.add(a); 
+						l++; 
+						r--; }
+					else if (currentSum < targetSum){
+					l++; }
+					else if (currentSum > targetSum){
+					r--; }}}}
+    return list; 
+  }
+}
