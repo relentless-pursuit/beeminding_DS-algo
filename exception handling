@@ -1,0 +1,9 @@
+try{
+......
+}
+catch (NullPointerException ex{
+....
+}
+catch (Exception ex){
+....
+}
