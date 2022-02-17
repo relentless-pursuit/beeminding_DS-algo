@@ -1,0 +1,50 @@
+//creating an interface
+public interface GamingConsole {
+public void up(); 
+public void down(); 
+public void left(); 
+public void right(); 
+}
+
+//implementation to gaming console interface 
+public class MarioGame implements GamingConsole{
+public void up(){
+System.out.println("Jump")
+}
+ 
+public void down(){
+System.out.println("back")
+}
+
+public void left(){
+System.out.println("left")
+}
+
+public void right(){
+System.out.println("right")
+}
+}
+
+//class GameRunner which uses the interface for mario
+public class GameRunner {
+
+public static void main(Strings[] args) {
+Mario game = new MarioGame() 
+game.up(); 
+game.left(); 
+game.right(); 
+game.down();  
+}
+}
+
+//class GameRunner which uses the interface for chess
+public class GameRunner {
+
+public static void main(Strings[] args) {
+Chess game = new ChessGame() 
+game.up(); 
+game.left(); 
+game.right(); 
+game.down();  
+}
+}
