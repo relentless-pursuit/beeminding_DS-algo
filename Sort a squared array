@@ -1,0 +1,18 @@
+import java.util.*;
+
+class Program {
+
+  public int[] sortedSquaredArray(int[] array) {
+    // Write your code here.
+		
+		int i = 0; 
+		while (i< array.length)
+		{
+			array[i] = array[i]*array[i]; 				
+			i++;
+		}
+		//sort the array once squaring done since -ve numbers might exists
+		Arrays.sort(array); 
+    return array;
+  }
+}
