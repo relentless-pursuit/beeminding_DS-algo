@@ -1,0 +1,34 @@
+import java.util.*;
+
+class Program {
+
+  public int firstNonRepeatingCharacter(String string) {
+    // Write your code here.
+		HashMap<Character, Integer> map = new HashMap<>(); 
+		//converting string to character array
+		char[] strArray = string.toCharArray();
+		//adding elements to hashmap 
+		for (char val: strArray)
+		{
+			if(map.containsKey(val))
+			{
+				map.put(val, map.get(val)+1); 
+			}
+		else
+		{
+			map.put(val, 1); 
+		}
+		}
+		//since the array is indexed
+		//look for individual characters from the array
+		//now, from the map see if that character has count == 1 and return it
+		
+		//since we are returning index, a normal for loop 	
+		for (int i = 0; i<strArray.length; i++)
+		{
+			if (map.get(strArray[i]) == 1)
+				return i;                    //returning index 
+		}
+    return -1;
+  }
+}
