@@ -1,0 +1,42 @@
+public boolean generateDocument(String characters, String document) {
+    HashMap <Character, Integer> cmap = new HashMap <Character, Integer>(); 
+		HashMap <Character, Integer> dmap = new HashMap <Character, Integer>(); 
+		//removing white spaces from document
+		 String d = document.replaceAll(" ","");
+		//System.out.println(d); 
+		//creating character array
+		char[] cstr = characters.toCharArray();
+		char[] dstr = d.toCharArray();
+		//dmap 
+		for (char val: dstr)
+		{
+			if(dmap.containsKey(val))
+			{
+				dmap.put(val, dmap.get(val)+1); 
+			}
+		else
+		{
+			dmap.put(val, 1); 
+		}
+		}
+		//cmap 
+		for (char val: cstr)
+		{
+			if(cmap.containsKey(val))
+			{
+				cmap.put(val, cmap.get(val)+1); 
+			}
+		else
+		{
+			cmap.put(val, 1); 
+		}
+		}
+		//logic
+		for (int i = 0; i<dstr.length; i++)
+		{
+		if (dmap.get(dstr[i]) > cmap.get(dstr[i]))
+				return false;       
+		}
+    return true;
+  }
+}
