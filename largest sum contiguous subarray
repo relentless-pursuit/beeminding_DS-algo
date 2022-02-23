@@ -1,0 +1,23 @@
+public class  ContigiousSequence {
+	public static  long contigiousSequence(int arr[] , int n) {
+		long currsum = arr[0]; 
+		long expsum = arr[0]; 
+
+		for (int i = 1; i < n; i++)
+		{
+			if(currsum >= 0)
+			{
+			currsum = currsum + arr[i]; 
+			}
+			else 
+			{
+			currsum = arr[i];
+			} 
+
+			if (currsum > expsum)
+			expsum = currsum; 
+		}
+
+	return expsum; 
+		
+	}
