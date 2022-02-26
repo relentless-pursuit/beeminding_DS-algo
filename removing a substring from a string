@@ -1,0 +1,24 @@
+public static String removeWord(String string, String word)
+    {
+  
+        // Check if the word is present in string
+        // If found, remove it using removeAll()
+        if (string.contains(word)) {
+  
+            // To cover the case
+            // if the word is at the
+            // beginning of the string
+            // or anywhere in the middle
+            String tempWord = word + " ";
+            string = string.replaceAll(tempWord, "");
+  
+            // To cover the edge case
+            // if the word is at the
+            // end of the string
+            tempWord = " " + word;
+            string = string.replaceAll(tempWord, "");
+        }
+  
+        // Return the resultant string
+        return string;
+    }
