@@ -1,0 +1,15 @@
+class combinations {int arr, int boxes, int items)
+if (cb > tb)
+{
+if (ssf == ts)
+{
+System.out.println(asf); 
+}
+return; 
+}
+
+
+combinations (cb + 1, tb, ssb + 1, asf + "i", ts)
+combinations (cb + 1, tb, ssb, asf + "_", ts)
+
+}
