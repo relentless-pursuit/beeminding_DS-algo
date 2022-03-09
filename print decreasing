@@ -1,0 +1,4 @@
+public class decreasing (int n) {
+System.out.println(n); 
+decreasing (n-1); 
+}
